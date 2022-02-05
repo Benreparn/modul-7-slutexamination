@@ -1,0 +1,18 @@
+.add-container {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #2F2926;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-graphic {
+    width: 18px !important;
+}
+
+.menu-item-container {
+    display: flex;  
+    flex-flow: row wrap;
+}

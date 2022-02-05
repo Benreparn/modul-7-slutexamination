@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+.order-button {
+    height: 60px;
+    width: 60px;
+    background: #2F2926;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    z-index: 1;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.bag-graphic {
+    width: 16px;
+}
+
+.order-count {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    position: absolute;
+    background: #E5674E;
+    top: -3px;
+    right: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+}

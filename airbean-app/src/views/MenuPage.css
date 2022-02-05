@@ -1,0 +1,36 @@
+.menu-page {
+    min-height: 100vh;
+    background-color: #F3E4E1;
+}
+
+.graphics-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.graphics-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.order-button {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-container {
+    position: absolute;
+    top: 160px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(243, 228, 225, .7);
+}

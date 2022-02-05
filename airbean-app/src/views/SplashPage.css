@@ -1,0 +1,30 @@
+.landing__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #38846D;
+}
+
+.landing__container__graphic {
+    width: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.intro-graphic-left {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    z-index: 1;
+}
+
+.intro-graphic-right {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
+}
