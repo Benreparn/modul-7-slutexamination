@@ -4,3 +4,9 @@ export const addNewItem = (item) => {
         payload: item
     }
 }
+
+export const emptyCart = () => {
+    return {
+        type: 'EMPTY_CART'
+    }
+}

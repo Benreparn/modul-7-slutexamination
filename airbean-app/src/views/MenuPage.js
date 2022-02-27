@@ -6,15 +6,17 @@ import './MenuPage.css';
 import graphicsHeader from '../assets/graphics/graphics-header.svg';
 import graphicsFooter from '../assets/graphics/graphics-footer.svg';
 import OrderButton from '../components/OrderButton';
+import OrderModal from '../components/OrderModal';
 import MenuItem from '../components/MenuItem';
 import { addAllItems } from '../actions/menuActions';
+import { toggleModal } from '../actions/menuModalActions';
 
 
 function MenuPage() {
 
     const dispatch = useDispatch();
     const items = useSelector((state) => { return state.menu });
-  
+
     useEffect(() => {
       async function getMenuItems() {
         const respone = await fetch('http://localhost:5000/api/beans', {method: "GET"});
@@ -28,7 +30,10 @@ function MenuPage() {
         <section>
             <div className="menu-page">
 
-                <OrderButton className="order-button"/>
+                <div onClick={()=> dispatch(toggleModal(true))}>
+                    <OrderButton className="order-button"/>
+                </div>
+                
                 <img className="graphics-header" src={graphicsHeader} alt="graphics header" />
 
                 <div className="menu-container">
@@ -45,9 +50,7 @@ function MenuPage() {
                         })}
                     </div>
                 </div>
-
-                {/* <OrderModal></OrderModal> */}
-
+                <OrderModal></OrderModal>
                 <img className="graphics-footer" src={graphicsFooter} alt="graphics footer" />
             </div>
         </section>

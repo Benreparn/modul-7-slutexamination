@@ -33,6 +33,11 @@ const cartReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_NEW_ITEM':
             return pushItem(state, action);
+        case 'EMPTY_CART':
+            return {
+                ...state,
+                cart: []
+            }
         default:
             return state;
     }
