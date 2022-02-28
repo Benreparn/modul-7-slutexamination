@@ -34,4 +34,23 @@
     border-radius: 5px;
     background: rgba(243, 228, 225, .7);
     z-index: 3;
+    width: 90%;
+    max-width: 720px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+
+.header-text {
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    color: #2F2926;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

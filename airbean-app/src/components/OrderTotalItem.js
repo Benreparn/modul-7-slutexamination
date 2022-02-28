@@ -19,27 +19,26 @@ function OrderTotalItem() {
 
     return (
         <section>
-            <div className="menu-item-container">
-                <div>
-                    <div>
-                        <div>
-                            <span>
-
-                            </span>
-                        </div>
-                        <div></div>
-                        <div>
-                            <span>
-                                {checkForSpecialPrice() ? '40 Kr' : cartState.cart.reduce((total, currentValue) => total = total + currentValue.count * currentValue.price, 0)}
-                            </span>
-                        </div>
-                    </div>
-                    <div>
+            <div className="order-total-item-container">
+                <div className="order-total-item-content">
+                    <div className="order-total-item-total">
                         <span>
-                            {checkForSpecialPrice() ? 'inkl moms + drönarleverans + 39kr rabatt' : 'inkl moms + drönarleverans'}
+                            Total
                         </span>
                     </div>
-
+                    <div className="order-total-item-line-container">
+                        <div className="order-total-item-line"></div>
+                    </div>
+                    <div className="order-total-item-price">
+                        <span>
+                            {checkForSpecialPrice() ? '40 kr' : cartState.cart.reduce((total, currentValue) => total = total + currentValue.count * currentValue.price, 0) + ' kr'}
+                        </span>
+                    </div>
+                </div>
+                <div className="order-total-item-text">
+                    <span>
+                        {checkForSpecialPrice() ? 'inkl moms + drönarleverans + 39kr rabatt' : 'inkl moms + drönarleverans'}
+                    </span>
                 </div>
             </div>
         </section>

@@ -1,4 +1,4 @@
-import './MenuItem.css';
+import './OrderItem.css';
 import { useSelector, useDispatch } from 'react-redux'
 
 import upArrowGraphic from '../assets/graphics/arrow-up.svg';
@@ -12,43 +12,34 @@ function MenuItem({ id }) {
 
     return (
         <section>
-            <div className="menu-item-container">
-                <div>
-                    <div>
-                        <div>
-                            <span>
-                                {cartState.cart.find(element => element.id === id).title}
-                            </span>
-                        </div>
-                        <div></div>
-                        <div>
-                            <span>
-                                {cartState.cart.find(element => element.id === id).price * cartState.cart.find(element => element.id === id).count}
-                            </span>
-                        </div>
-                    </div>
-                    <div>
+            <div className="order-item-container">
+                <div className="order-item-content">
+                    <div className="order-item-title">
                         <span>
-                            {cartState.cart.find(element => element.id === id).desc} 
+                            {cartState.cart.find(element => element.id === id).title}
                         </span>
                     </div>
-
-                    <div>
-                        <div className="arrow-container" onClick={()=> dispatch(addItemCount({id: id}))}>
-                            <img className="arrow-graphic" src={upArrowGraphic} alt="up" />
-                        </div>
-
-                        <div>
-                            <span>
-                                {cartState.cart.find(element => element.id === id).count}
-                            </span>
-                        </div>
-
-                        <div className="arrow-container" onClick={()=> dispatch(reduceItemCount({id: id}))}>
-                            <img className="arrow-graphic" src={downArrowGraphic} alt="down" />
-                        </div>
+                    <div className="order-item-price">
+                        <span>
+                            {cartState.cart.find(element => element.id === id).price * cartState.cart.find(element => element.id === id).count} kr
+                        </span>
                     </div>
-
+                </div>
+                <div className="order-item-line-container">
+                    <div className="order-item-line"></div>
+                </div>
+                <div className="order-item-toggle-container">
+                    <div className="arrow-up-container" onClick={()=> dispatch(addItemCount({id: id}))}>
+                        <img className="arrow-graphic" src={upArrowGraphic} alt="up" />
+                    </div>
+                    <div className="order-number-container">
+                        <span>
+                            {cartState.cart.find(element => element.id === id).count}
+                        </span>
+                    </div>
+                    <div className="arrow-down-container" onClick={()=> dispatch(reduceItemCount({id: id}))}>
+                        <img className="arrow-graphic" src={downArrowGraphic} alt="down" />
+                    </div>
                 </div>
             </div>
         </section>

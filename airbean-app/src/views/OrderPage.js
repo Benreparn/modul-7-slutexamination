@@ -43,19 +43,43 @@ function OrderPage() {
     return (
         <section>
             <div className="order-page">
-
-                {(!order.order.eta || promiseInProgress) && <img className="loader" src={loader} alt="loader" />}
-
-                {!!order.order.eta && !promiseInProgress && <div>
-                    {order.order.eta}
-                    <img className="drone" src={drone} alt="drone" />
-                    {order.order.orderNr}
-
-                    <Link to="/menu">
-                        <div>
-                            Ok, cool!
-                        </div>
-                    </Link>
+                <div className="order-page-loader">
+                    {(!order.order.eta || promiseInProgress) && <img className="loader" src={loader} alt="loader" />}
+                </div>
+                
+                {!!order.order.eta && !promiseInProgress && 
+                <div className="order-page-content">
+                    <div className="order-page-order-container">
+                        <span className="order-page-order">
+                            Ordernummer
+                        </span>
+                        <span className="order-page-order-number">
+                            #{order.order.orderNr}
+                        </span>                        
+                    </div>
+                    <div>
+                        <img className="order-page-drone" src={drone} alt="drone" />
+                    </div>
+                    <div>
+                        <span className="order-page-order-confirmation">
+                            Din beställning är på väg!
+                        </span>
+                    </div>
+                    <div className="order-page-order-container">
+                        <span className="order-page-order-eta">
+                            {order.order.eta}
+                        </span>
+                        <span className="order-page-order-minutes">
+                            minuter
+                        </span>
+                    </div>
+                    <div className='order-page-button-container'>
+                        <Link to="/menu" className='order-page-ok-link'>
+                            <div className='order-page-ok-button'>
+                                Ok, cool!
+                            </div>
+                        </Link>
+                    </div>
                 </div>}
             </div>
         </section>

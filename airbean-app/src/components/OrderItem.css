@@ -1,4 +1,65 @@
-.menu-item-container {
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Work+Sans&display=swap');
+
+.order-item-container {
     display: flex;  
     flex-flow: row wrap;
+}
+
+.order-item-title {
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2F2926;
+}
+
+.order-item-price {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #2F2926;
+}
+
+.order-item-line-container {
+    display: flex;
+    flex-grow: 1;
+    padding: 7px;
+}
+
+.order-item-line {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.4);
+    width: 100%;
+    position: relative;
+    bottom: 19px;
+}
+
+.arrow-up-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.arrow-down-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.order-number-container {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2F2926;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-item-toggle-container {
+    position: relative;
 }

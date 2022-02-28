@@ -1,4 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Work+Sans&display=swap');
+
 .order-page {
     min-height: 100vh;
     background-color: #E5674E;
+    padding: 0 40px 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.order-page-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 0 40px 0;
+}
+
+.order-page-ok-button {
+    width: 184px;
+    height: 55px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    font-family: 'PT Serif', serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    color: #2F2926;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.order-page-ok-link {
+    text-decoration: none;
+}
+
+.order-page-order-minutes {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: thin;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.order-page-order-eta {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.order-page-order-confirmation {
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.order-page-drone {
+    width: 100%;
+}
+
+.order-page-order-number {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.order-page-order {
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.order-page-order-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.order-page-button-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.order-page-order-content-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.order-page-content {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding: 20px 0 20px 0;
 }

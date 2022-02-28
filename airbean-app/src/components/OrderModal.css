@@ -14,8 +14,13 @@
     justify-content: center;
 }
 
-.order-modal__content {
-    padding: 20px;
+.order-modal-content {
+    padding: 40px 20px 40px 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+    height: -webkit-fill-available;
 }
 
 .order-modal-backdrop {
@@ -58,4 +63,32 @@
 
 .order-link {
     text-decoration: none;
+}
+.order-modal-bottom-content {
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.order-modal-order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.order-modal-header-text {
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    color: #2F2926;
+}
+
+.order-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
