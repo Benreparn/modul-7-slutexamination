@@ -33,4 +33,5 @@
     padding: 10px;
     border-radius: 5px;
     background: rgba(243, 228, 225, .7);
+    z-index: 3;
 }

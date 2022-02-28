@@ -11,16 +11,12 @@ import MenuItem from '../components/MenuItem';
 import { addAllItems } from '../actions/menuActions';
 import { toggleModal } from '../actions/menuModalActions';
 
-
 function MenuPage() {
 
     const dispatch = useDispatch();
     const items = useSelector((state) => { return state.menu });
 
     useEffect(() => {
-
-    //   dispatch(makeOrder(data));
-
       async function getMenuItems() {
         const respone = await fetch('http://localhost:5000/api/beans', {method: "GET"});
         const data = await respone.json();

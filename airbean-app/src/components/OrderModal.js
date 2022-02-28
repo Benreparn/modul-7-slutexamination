@@ -25,11 +25,11 @@ function OrderModal() {
 
                     <OrderTotalItem></OrderTotalItem>
 
-                    <Link to="/order" className='order-link'>
+                    {!(cartState.cart.reduce((total, currentValue) => total = total + currentValue.count, 0) === 0) && <Link to="/order" className='order-link'>
                         <div className='make-order-button'>
                             Take my money!
                         </div>
-                    </Link>
+                    </Link>}
                 </div>
             </div>}
         </section>
