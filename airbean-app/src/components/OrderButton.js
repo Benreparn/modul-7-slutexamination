@@ -11,7 +11,9 @@ function OrderButton() {
         <section>
             <div className="order-button">
                 <div className="order-count">
-                    {items.cart.length}
+                    {
+                        items.cart.reduce((total, currentValue) => total = total + currentValue.count, 0)
+                    }
                 </div>
                 <img className="bag-graphic" src={bagGraphic} alt="bag" />
             </div>

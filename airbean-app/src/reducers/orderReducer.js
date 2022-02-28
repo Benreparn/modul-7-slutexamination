@@ -9,6 +9,11 @@ const menuReducer = (state = initialState, action) => {
                 ...state,
                 order: action.payload
             }
+        case 'CLEAR_ORDER':
+            return {
+                ...state,
+                order: {}
+            }
         default:
             return state;
     }

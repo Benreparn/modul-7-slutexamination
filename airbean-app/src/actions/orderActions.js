@@ -4,3 +4,9 @@ export const makeOrder = (order) => {
         payload: order
     }
 }
+
+export const clearOrder = () => {
+    return {
+        type: 'CLEAR_ORDER'
+    }
+}

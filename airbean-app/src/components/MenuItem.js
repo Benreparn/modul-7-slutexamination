@@ -31,7 +31,7 @@ function MenuItem({ title, price, desc, id }) {
                     </div>
                     <div>
                         <span>
-                            {desc} 
+                            {desc}
                         </span>
                     </div>
                 </div>

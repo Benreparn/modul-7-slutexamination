@@ -2,8 +2,10 @@ import './OrderModal.css';
 
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleModal } from '../actions/menuModalActions';
-import OrderItem from '../components/OrderItem';
 import { Link } from "react-router-dom";
+
+import OrderItem from '../components/OrderItem';
+import OrderTotalItem from '../components/OrderTotalItem';
 
 function OrderModal() {
 
@@ -16,18 +18,19 @@ function OrderModal() {
             {modalState.toggled && <div className="order-modal-backdrop" onClick={()=> dispatch(toggleModal(false))}></div>}
             {modalState.toggled &&  <div className="order-modal">
                 <div className="order-modal-arrow"></div>
+                <div className='order-modal__content'>
+                    { cartState.cart.map((item) => {
+                        return !!item.count && <OrderItem id={ item.id } key={ item.id }></OrderItem>
+                    })}
 
+                    <OrderTotalItem></OrderTotalItem>
 
-                { cartState.cart.map((item) => {
-                    return <OrderItem title={ item.title } price={ item.price } desc={ item.desc } id={ item.id } key={ item.id }></OrderItem>
-                })}
-
-                <Link to="/order">
-                    <div>
-                        Take my money!
-                    </div>
-                </Link>
-
+                    <Link to="/order" className='order-link'>
+                        <div className='make-order-button'>
+                            Take my money!
+                        </div>
+                    </Link>
+                </div>
             </div>}
         </section>
     )

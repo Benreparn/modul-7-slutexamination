@@ -18,6 +18,9 @@ function MenuPage() {
     const items = useSelector((state) => { return state.menu });
 
     useEffect(() => {
+
+    //   dispatch(makeOrder(data));
+
       async function getMenuItems() {
         const respone = await fetch('http://localhost:5000/api/beans', {method: "GET"});
         const data = await respone.json();
